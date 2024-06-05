@@ -17,12 +17,12 @@ body {
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
-  height: 250px;
+  height: 150px;
 }
 
 .home-header nav {
   margin-left: auto;
-  padding-bottom: 150px;
+  padding-bottom: 70px;
 }
 
 .home-header nav ul {
