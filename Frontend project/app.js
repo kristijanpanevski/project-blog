@@ -56,10 +56,7 @@ const renderHeader = () => {
   const header = document.querySelector(".home-header");
   const navItems = [
     { text: "Posts", href: "#" },
-    {
-      text: "Newsletter",
-      onClick: showNewsletterPopup,
-    },
+    { text: "Newsletter", onClick: showNewsletterPopup },
     { text: "About Us", href: "#" },
     { text: "Sample", href: "#" },
     { text: "Log in", onClick: showLoginPopup },
@@ -86,40 +83,39 @@ const renderHeader = () => {
 
 // Render and display the login popup
 const showLoginPopup = () => {
-  const existingPopup = document.querySelector(".login-popup");
-  if (existingPopup) {
-    existingPopup.style.display = "flex";
+  let popup = document.querySelector(".login-popup");
+  if (popup) {
+    popup.style.display = "flex";
     return;
   }
 
-  const popup = document.createElement("div");
+  popup = document.createElement("div");
   popup.className = "login-popup";
   popup.innerHTML = `
-        <div class="login-popup-content">
-            <span class="close-button">&times;</span>
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    `;
+    <div class="login-popup-content">
+      <span class="close-button">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+      </form>
+      <p class="create-account-link"><a href="#" id="create-account-link">Create new account</a></p>
+    </div>
+  `;
   document.body.appendChild(popup);
 
   // Close login popup button functionality
-  const closeButton = popup
-    .querySelector(".close-button")
-    .addEventListener("click", () => {
-      popup.style.display = "none";
-    });
+  popup.querySelector(".close-button").addEventListener("click", () => {
+    popup.style.display = "none";
+  });
 };
 
 // Render and display the newsletter popup
 const showNewsletterPopup = () => {
-  const existingPopup = document.querySelector(".newsletterPopup");
+  let existingPopup = document.querySelector(".newsletterPopup");
   if (existingPopup) {
     existingPopup.style.display = "flex";
     return;
@@ -128,17 +124,17 @@ const showNewsletterPopup = () => {
   const newsletterPopup = document.createElement("div");
   newsletterPopup.className = "newsletterPopup";
   newsletterPopup.innerHTML = `
-        <div class="newsletterPopup-content">
-            <span class="close-button">&times;</span>
-            <h1>Join our e-mail list!</h1>
-            <br>
-            <p>Sign up for our weekly updates</p>
-            <form>
-                <input type="email" placeholder="Your email address" required>
-            <p>Coming soon...</p>
-            </form>
-        </div>
-    `;
+    <div class="newsletterPopup-content">
+      <span class="close-button">&times;</span>
+      <h1>Join our e-mail list!</h1>
+      <br>
+      <p>Sign up for our weekly updates</p>
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <p>Coming soon...</p>
+      </form>
+    </div>
+  `;
   document.body.appendChild(newsletterPopup);
 
   // Show the modal
@@ -153,5 +149,3 @@ const showNewsletterPopup = () => {
 };
 
 renderHeader();
-
-// ova
