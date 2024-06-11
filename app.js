@@ -37,7 +37,7 @@ function closeNewsletter() {
   document.querySelector(".newsletterPopup").style.display = "none";
 }
 
-// Add event listeners for login popup
+// Event listeners for login popup
 document
   .querySelector(".open-button")
   .addEventListener("click", function (event) {
@@ -45,7 +45,7 @@ document
     openForm();
   });
 
-// Add event listeners for newsletter popup
+// Event listeners for newsletter popup
 document
   .getElementById("NewsletterPopUp")
   .addEventListener("click", function (event) {
