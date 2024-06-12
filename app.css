@@ -6,9 +6,10 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
+/* Nav bar*/
 li {
   list-style: none;
 }
@@ -35,6 +36,7 @@ a {
   height: 120px;
 }
 
+/*Hamburger menu */
 .hamburger {
   display: none;
 }
@@ -76,7 +78,7 @@ a {
   color: #482ff7;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -212,7 +214,7 @@ a {
   outline: none;
 }
 
-/* Submit/login button */
+/* Login button */
 .form-container .btn {
   background-color: #00cfc8;
   color: white;
@@ -300,11 +302,4 @@ a {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-}
-
-.newsletterPopup button {
-  padding: 10px;
-  background-color: white;
-  border: none;
-  cursor: pointer;
 }
